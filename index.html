@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY Account Elfath - تطبيق إدارة الاكونت الاحترافي</title>
-    <meta name="description" content="تطبيق MY Account Elfath لإدارة الاكونت بشكل احترافي وآمن. واجهة سهلة، أداء سريع، ودعم فني مستمر.">
+    <meta name="description"
+        content="تطبيق MY Account Elfath لإدارة الاكونت بشكل احترافي وآمن. واجهة سهلة، أداء سريع، ودعم فني مستمر.">
     <link rel="icon" type="image/png" href="app_icon.png">
     <link rel="apple-touch-icon" href="app_icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,6 +19,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --primary: #1a5f7a;
             --primary-dark: #0f3d4f;
@@ -69,7 +72,7 @@
         .preloader-spinner {
             width: 60px;
             height: 60px;
-            border: 4px solid rgba(255,255,255,0.2);
+            border: 4px solid rgba(255, 255, 255, 0.2);
             border-top-color: white;
             border-radius: 50%;
             animation: spin 1s linear infinite;
@@ -77,7 +80,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .preloader-text {
@@ -116,13 +121,20 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
             animation: pulse 20s ease-in-out infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(180deg);
+            }
         }
 
         .hero-content {
@@ -137,7 +149,7 @@
             height: 140px;
             margin: 0 auto 32px;
             border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             animation: float 3s ease-in-out infinite;
             background: white;
             padding: 4px;
@@ -154,7 +166,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 16px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .hero-subtitle {
@@ -168,7 +180,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
             padding: 8px 20px;
             border-radius: 24px;
             font-size: 0.95rem;
@@ -233,7 +245,8 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 177.78%; /* 9:16 aspect ratio for shorts */
+            padding-bottom: 177.78%;
+            /* 9:16 aspect ratio for shorts */
             height: 0;
         }
 
@@ -251,8 +264,10 @@
             .video-wrapper {
                 max-width: 900px;
             }
+
             .video-container {
-                padding-bottom: 56.25%; /* 16:9 aspect ratio for desktop */
+                padding-bottom: 56.25%;
+                /* 16:9 aspect ratio for desktop */
             }
         }
 
@@ -432,7 +447,7 @@
         .footer-link {
             color: white;
             text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
             padding-bottom: 2px;
         }
@@ -499,6 +514,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Preloader -->
     <div class="preloader" id="preloader">
@@ -537,9 +553,7 @@
                 </div>
                 <div class="video-wrapper">
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/RlnFayp1A6g" 
-                            allowfullscreen
+                        <iframe src="https://www.youtube.com/embed/RlnFayp1A6g" allowfullscreen
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
                         </iframe>
                     </div>
@@ -564,9 +578,10 @@
                         </div>
                         <h3 class="download-card-title">تحميل مباشر (Local)</h3>
                         <div class="qr-wrapper">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=MY.Account.Elfath_1_1.0.apk" alt="QR Local">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=MY.Account.Elfath_1_1.0.apk"
+                                alt="QR Local">
                         </div>
-                        <a href="MY.Account.Elfath_1_1.0.apk" class="download-btn" download>
+                        <a href="MY.Account.Elfath_1.2.0.apk" class="download-btn" download>
                             <i class="fas fa-download"></i>
                             <span>تحميل الآن</span>
                         </a>
@@ -579,9 +594,11 @@
                         </div>
                         <h3 class="download-card-title">رابط مباشر</h3>
                         <div class="qr-wrapper">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://github.com/tahawy111/MY_ACCOUNT_ELFATH/releases/download/Release/MY.Account.Elfath_1_1.0.apk" alt="QR Direct">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://github.com/tahawy111/MY_ACCOUNT_ELFATH/releases/download/Release/MY.Account.Elfath_1_1.0.apk"
+                                alt="QR Direct">
                         </div>
-                        <a href="https://github.com/tahawy111/MY_ACCOUNT_ELFATH/releases/download/Release/MY.Account.Elfath_1_1.0.apk" class="download-btn" target="_blank">
+                        <a href="https://github.com/tahawy111/MY_ACCOUNT_ELFATH/releases/download/Release/MY.Account.Elfath_1_1.0.apk"
+                            class="download-btn" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             <span>تحميل مباشر</span>
                         </a>
@@ -594,9 +611,11 @@
                         </div>
                         <h3 class="download-card-title">MediaFire</h3>
                         <div class="qr-wrapper">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.mediafire.com/file/li53p77gbi2nbh0/MY.Account.Elfath_1_1.0.apk/file" alt="QR MediaFire">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.mediafire.com/file/li53p77gbi2nbh0/MY.Account.Elfath_1_1.0.apk/file"
+                                alt="QR MediaFire">
                         </div>
-                        <a href="https://www.mediafire.com/file/li53p77gbi2nbh0/MY.Account.Elfath_1_1.0.apk/file" class="download-btn" target="_blank">
+                        <a href="https://www.mediafire.com/file/li53p77gbi2nbh0/MY.Account.Elfath_1_1.0.apk/file"
+                            class="download-btn" target="_blank">
                             <i class="fas fa-cloud-download-alt"></i>
                             <span>تحميل من MediaFire</span>
                         </a>
@@ -609,9 +628,11 @@
                         </div>
                         <h3 class="download-card-title">Mega</h3>
                         <div class="qr-wrapper">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://mega.nz/file/vcUzVIhA%23ggHq5mEmJrKHQrNJ4mVUN5Wv3yPbLXbCYN_ju2Dwj3M" alt="QR Mega">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://mega.nz/file/vcUzVIhA%23ggHq5mEmJrKHQrNJ4mVUN5Wv3yPbLXbCYN_ju2Dwj3M"
+                                alt="QR Mega">
                         </div>
-                        <a href="https://mega.nz/file/vcUzVIhA#ggHq5mEmJrKHQrNJ4mVUN5Wv3yPbLXbCYN_ju2Dwj3M" class="download-btn" target="_blank">
+                        <a href="https://mega.nz/file/vcUzVIhA#ggHq5mEmJrKHQrNJ4mVUN5Wv3yPbLXbCYN_ju2Dwj3M"
+                            class="download-btn" target="_blank">
                             <i class="fas fa-cloud-upload-alt"></i>
                             <span>تحميل من Mega</span>
                         </a>
@@ -685,8 +706,9 @@
                         <i class="fas fa-copyright"></i> 2025 MY Account Elfath - جميع الحقوق محفوظة
                     </p>
                     <p class="footer-developer">
-                        <i class="fas fa-code"></i> تم التطوير بواسطة 
-                        <a href="https://tahawy.org" target="_blank" rel="noopener noreferrer" class="footer-link">Tahawy</a>
+                        <i class="fas fa-code"></i> تم التطوير بواسطة
+                        <a href="https://tahawy.org" target="_blank" rel="noopener noreferrer"
+                            class="footer-link">Tahawy</a>
                     </p>
                 </div>
             </footer>
@@ -732,4 +754,5 @@
         });
     </script>
 </body>
+
 </html>
