@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY Account Elfath - تطبيق إدارة الاكونت الاحترافي</title>
-    <meta name="description" content="تطبيق MY Account Elfath لإدارة الاكونت بشكل احترافي وآمن. واجهة سهلة، أداء سريع، ودعم فني مستمر.">
-    
+    <meta name="description"
+        content="تطبيق MY Account Elfath لإدارة الاكونت بشكل احترافي وآمن. واجهة سهلة، أداء سريع، ودعم فني مستمر.">
+
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- FontAwesome (deferred) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'">
+
     <script>
         tailwind.config = {
             theme: {
@@ -76,7 +80,7 @@
             --background: 0 0% 100%;
             --foreground: 0 0% 3.9%;
             /* Primary Logo Color: Red from the logo (approx string #a40000 / rgb(164,0,0) -> hsl(0,100%,32%)) */
-            --primary: 0 100% 32%; 
+            --primary: 0 100% 32%;
             --primary-foreground: 0 0% 98%;
             --secondary: 0 0% 96.1%;
             --secondary-foreground: 0 0% 9%;
@@ -94,7 +98,8 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 5rem; /* For the sticky header */
+            scroll-padding-top: 5rem;
+            /* For the sticky header */
         }
 
         body {
@@ -106,7 +111,7 @@
         /* Subtle modern shadcn-like grid */
         .bg-grid {
             background-size: 30px 30px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
         }
@@ -116,7 +121,7 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
-        
+
         .anim-fade-up.visible {
             opacity: 1;
             transform: translateY(0);
@@ -125,12 +130,13 @@
         /* Youtube layout */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
+            /* 16:9 */
             height: 0;
             overflow: hidden;
             border-radius: var(--radius);
         }
-        
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -144,23 +150,28 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: hsl(var(--secondary));
         }
+
         ::-webkit-scrollbar-thumb {
             background: hsl(var(--muted-foreground)/0.5);
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: hsl(var(--primary)/0.8);
         }
     </style>
 </head>
 
-<body class="bg-background text-foreground min-h-screen relative overflow-x-hidden selection:bg-primary/20 selection:text-primary">
+<body
+    class="bg-background text-foreground min-h-screen relative overflow-x-hidden selection:bg-primary/20 selection:text-primary">
 
     <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+        class="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between max-w-7xl">
             <a href="#" class="flex items-center gap-3 transition-opacity hover:opacity-80">
                 <img src="app_icon.png" alt="Logo" width="40" height="40" class="w-10 h-10 object-cover" loading="lazy">
@@ -171,7 +182,8 @@
                 <a href="#video" class="transition-colors hover:text-primary text-foreground/80">الشرح</a>
                 <a href="#download" class="transition-colors hover:text-primary text-foreground/80">التحميل</a>
             </nav>
-            <a href="#download" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-5 py-2">
+            <a href="#download"
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-5 py-2">
                 تحميل فوراً
             </a>
         </div>
@@ -180,34 +192,44 @@
     <main class="flex-1 relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <!-- Background decorative grid & glow -->
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#ff80b5] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+            <div
+                class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-[#ff80b5] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]">
+            </div>
         </div>
-        <div class="absolute inset-0 bg-grid opacity-50 pointer-events-none -z-10 bg-[bottom_1px_center] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+        <div
+            class="absolute inset-0 bg-grid opacity-50 pointer-events-none -z-10 bg-[bottom_1px_center] [mask-image:linear-gradient(to_bottom,transparent,black)]">
+        </div>
 
         <!-- Hero Section -->
         <section class="pt-24 pb-16 md:pt-32 md:pb-24 flex flex-col items-center text-center anim-fade-up">
-            <div class="inline-flex items-center rounded-full border border-border/60 bg-muted/50 px-3 py-1 text-sm font-medium mb-8 backdrop-blur shadow-sm cursor-default hover:bg-muted/80 transition-colors">
+            <div
+                class="inline-flex items-center rounded-full border border-border/60 bg-muted/50 px-3 py-1 text-sm font-medium mb-8 backdrop-blur shadow-sm cursor-default hover:bg-muted/80 transition-colors">
                 <span class="flex h-2 w-2 rounded-full bg-primary mx-2 animate-pulse"></span>
                 الإصدار <span class="text-primary font-semibold mr-1">1.2.0</span>
             </div>
-            
-            <div class="w-36 h-36 md:w-44 md:h-44 mb-10 transform transition-transform duration-500 hover:scale-105 hover:rotate-3">
+
+            <div
+                class="w-36 h-36 md:w-44 md:h-44 mb-10 transform transition-transform duration-500 hover:scale-105 hover:rotate-3">
                 <img src="app_icon.png" alt="MY Account Elfath App Icon" class="w-full h-full object-contain">
             </div>
 
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-balance text-foreground">
                 إدارة احترافية مع <span class="text-primary">Elfath</span>
             </h1>
-            
-            <p class="text-lg md:text-xl text-muted-foreground w-full max-w-[650px] mx-auto mb-10 text-balance leading-relaxed">
-                التطبيق الأسرع والأكثر أماناً لإدارة حساباتك بسهولة تامة. تمتع بواجهة مريحة للعين، وأداء مستقر مع الحفاظ على خصوصية بياناتك!
+
+            <p
+                class="text-lg md:text-xl text-muted-foreground w-full max-w-[650px] mx-auto mb-10 text-balance leading-relaxed">
+                التطبيق الأسرع والأكثر أماناً لإدارة حساباتك بسهولة تامة. تمتع بواجهة مريحة للعين، وأداء مستقر مع الحفاظ
+                على خصوصية بياناتك!
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-                <a href="#download" class="inline-flex items-center justify-center rounded-md text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:bg-primary/90 hover:-translate-y-0.5 h-12 px-8 py-3 w-full sm:w-auto">
+                <a href="#download"
+                    class="inline-flex items-center justify-center rounded-md text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:bg-primary/90 hover:-translate-y-0.5 h-12 px-8 py-3 w-full sm:w-auto">
                     <i class="fas fa-arrow-down ml-2"></i> تحميل التطبيق مجاناً
                 </a>
-                <a href="#video" class="inline-flex items-center justify-center rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-12 px-8 py-3 w-full sm:w-auto">
+                <a href="#video"
+                    class="inline-flex items-center justify-center rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-12 px-8 py-3 w-full sm:w-auto">
                     <i class="fas fa-play ml-2 text-primary"></i> كيف يعمل التطبيق؟
                 </a>
             </div>
@@ -216,24 +238,28 @@
         <!-- Video Section -->
         <section id="video" class="py-16 md:py-24 anim-fade-up">
             <div class="text-center mb-12">
-                <span class="text-sm font-semibold tracking-wider text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">دليل الاستخدام</span>
+                <span
+                    class="text-sm font-semibold tracking-wider text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">دليل
+                    الاستخدام</span>
                 <h2 class="text-3xl font-bold tracking-tight mt-4 mb-4 text-foreground">تعرف على التطبيق عن قرب</h2>
                 <p class="text-lg text-muted-foreground w-full max-w-[600px] mx-auto text-balance">
                     شرح مفصل لطريقة استخدام واجهة التطبيق، والمميزات الجديدة التي تمت إضافتها لتسهيل عملك.
                 </p>
             </div>
-            
-            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-border/50 bg-card p-2 md:p-3 relative group">
+
+            <div
+                class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-border/50 bg-card p-2 md:p-3 relative group">
                 <!-- Video Decoration Glow -->
-                <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                <div class="video-container rounded-lg overflow-hidden relative z-10 ring-1 ring-border/20 shadow-inner bg-black">
+                <div
+                    class="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                </div>
+                <div
+                    class="video-container rounded-lg overflow-hidden relative z-10 ring-1 ring-border/20 shadow-inner bg-black">
                     <!-- lazy loading to improve performance -->
-                    <iframe src="https://www.youtube.com/embed/FahuT3Dyp64?si=smmLGUoKzbqJ1icH" 
-                        title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy">
+                    <iframe src="https://www.youtube.com/embed/FahuT3Dyp64?si=smmLGUoKzbqJ1icH"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
                     </iframe>
                 </div>
             </div>
@@ -242,88 +268,107 @@
         <!-- Features Section (Shadcn UI Card Pattern) -->
         <section id="features" class="py-16 md:py-24 anim-fade-up">
             <div class="text-center mb-12">
-                <span class="text-sm font-semibold tracking-wider text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">المميزات</span>
+                <span
+                    class="text-sm font-semibold tracking-wider text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">المميزات</span>
                 <h2 class="text-3xl font-bold tracking-tight mt-4 mb-4 text-foreground">كل ما تحتاجه في مكان واحد</h2>
                 <p class="text-lg text-muted-foreground w-full max-w-[600px] mx-auto text-balance">
                     خصائص صُممت بعناية لتناسب احتياجاتك، مع التركيز على الأداء السلس والأمان التام.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <!-- Feature 1 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">إدارة احترافية</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">تنظيم وإدارة دقيقة للاكونتات بشكل احترافي مع واجهة تُسهّل الوصول لكل التفاصيل.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">تنظيم وإدارة دقيقة للاكونتات بشكل
+                                احترافي مع واجهة تُسهّل الوصول لكل التفاصيل.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-wand-magic-sparkles"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">واجهة عصرية وبسيطة</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">لا تعقيد بعد اليوم! تصميم حديث ومريح لجميع المستخدمين، يوفر تجربة سلسة.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">لا تعقيد بعد اليوم! تصميم حديث
+                                ومريح لجميع المستخدمين، يوفر تجربة سلسة.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-lock"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">أمان وتشفير متقدم</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">حفظ بياناتك بأمان تام مع استخدام تقنيات تشفير قوية لحماية خصوصيتك.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">حفظ بياناتك بأمان تام مع استخدام
+                                تقنيات تشفير قوية لحماية خصوصيتك.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">أداء وسرعة خيالية</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">مصمم بمحرك سريع يضمن أداءً ذكياً وخفيفاً لا يستهلك طاقة بطارية الهاتف بقوة.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">مصمم بمحرك سريع يضمن أداءً ذكياً
+                                وخفيفاً لا يستهلك طاقة بطارية الهاتف بقوة.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-headset"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">دعم فني وتحديثات</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">نظل على تواصل دائم لتقديم المساعدة وإرسال تحديثات مجانية ومستمرة دورياً.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">نظل على تواصل دائم لتقديم المساعدة
+                                وإرسال تحديثات مجانية ومستمرة دورياً.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/40 group overflow-hidden">
                     <div class="p-6 flex flex-col gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                             <i class="fas fa-mobile-screen"></i>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-1.5">متوافق مع أندرويد</h3>
-                            <p class="text-sm text-muted-foreground leading-relaxed">يعمل بكفاءة عالية وتوافق تام مع شاشات وإصدارات هواتف الأندرويد.</p>
+                            <p class="text-sm text-muted-foreground leading-relaxed">يعمل بكفاءة عالية وتوافق تام مع
+                                شاشات وإصدارات هواتف الأندرويد.</p>
                         </div>
                     </div>
                 </div>
@@ -335,7 +380,9 @@
             <div class="rounded-3xl border border-border bg-card shadow-lg relative overflow-hidden">
                 <!-- Background Pattern inside cards -->
                 <div class="absolute inset-x-0 top-0 h-1/2 bg-muted/30"></div>
-                <div class="absolute w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -top-20 -right-20 pointer-events-none"></div>
+                <div
+                    class="absolute w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -top-20 -right-20 pointer-events-none">
+                </div>
 
                 <div class="p-8 md:p-12 relative z-10">
                     <div class="text-center mb-14">
@@ -347,55 +394,70 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative">
                         <!-- LOCAL -->
-                        <div class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all relative">
+                        <div
+                            class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all relative">
                             <!-- Badge -->
-                            <span class="absolute -top-3 right-6 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full shadow-sm">الأسرع</span>
-                            
-                            <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-5 text-2xl">
+                            <span
+                                class="absolute -top-3 right-6 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full shadow-sm">الأسرع</span>
+
+                            <div
+                                class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-5 text-2xl">
                                 <i class="fas fa-server"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-foreground">تحميل مباشر</h3>
                             <p class="text-sm text-muted-foreground text-center mb-8">من خوادمنا مباشرة بصيغة APK</p>
-                            
+
                             <div class="bg-white p-3 rounded-xl border border-border/60 shadow-sm mb-8 w-36 h-36">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=MY.Account.Elfath_1_2.0.apk" alt="QR Local" class="w-full h-full" loading="lazy">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=MY.Account.Elfath_1_2.0.apk"
+                                    alt="QR Local" class="w-full h-full" loading="lazy">
                             </div>
-                            
-                            <a href="MY.Account.Elfath_1.2.0.apk" download class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 px-6">
+
+                            <a href="MY.Account.Elfath_1.2.0.apk" download
+                                class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 px-6">
                                 <i class="fas fa-download ml-2 text-sm"></i> بدء التحميل
                             </a>
                         </div>
 
                         <!-- MEDIAFIRE -->
-                        <div class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-[#0070F0]/30 transition-all">
-                            <div class="bg-[#0070F0]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#0070F0] mb-5 text-2xl">
+                        <div
+                            class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-[#0070F0]/30 transition-all">
+                            <div
+                                class="bg-[#0070F0]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#0070F0] mb-5 text-2xl">
                                 <i class="fas fa-fire-alt"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-foreground">MediaFire</h3>
                             <p class="text-sm text-muted-foreground text-center mb-8">تحميل عبر سيرفرات ميديا فاير</p>
-                            
+
                             <div class="bg-white p-3 rounded-xl border border-border/60 shadow-sm mb-8 w-36 h-36">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.mediafire.com/file/huj2ijncwpipujf/MY.Account.Elfath_1_2.0.apk/file" alt="QR MediaFire" class="w-full h-full" loading="lazy">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.mediafire.com/file/huj2ijncwpipujf/MY.Account.Elfath_1_2.0.apk/file"
+                                    alt="QR MediaFire" class="w-full h-full" loading="lazy">
                             </div>
-                            
-                            <a href="https://www.mediafire.com/file/2ws2j1np53mbd5p/MY.Account.Elfath_1.2.0.apk/file" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6">
+
+                            <a href="https://www.mediafire.com/file/2ws2j1np53mbd5p/MY.Account.Elfath_1.2.0.apk/file"
+                                target="_blank" rel="noopener noreferrer"
+                                class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6">
                                 <i class="fas fa-external-link-alt ml-2 text-xs"></i> رابط ميديا فاير
                             </a>
                         </div>
 
                         <!-- MEGA -->
-                        <div class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-[#D9272E]/30 transition-all">
-                            <div class="bg-[#D9272E]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#D9272E] mb-5 text-2xl">
+                        <div
+                            class="flex flex-col items-center bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md hover:border-[#D9272E]/30 transition-all">
+                            <div
+                                class="bg-[#D9272E]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#D9272E] mb-5 text-2xl">
                                 <i class="fas fa-cloud"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-foreground">Mega .nz</h3>
                             <p class="text-sm text-muted-foreground text-center mb-8">تحميل ومشاركة سحابية مشفرة</p>
-                            
+
                             <div class="bg-white p-3 rounded-xl border border-border/60 shadow-sm mb-8 w-36 h-36">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mega.nz/file/PUsEgQzD%23OXrMladZpJ_eflDouAnLsLDZuWLscA5BhtwEZen1mg4" alt="QR Mega" class="w-full h-full" loading="lazy">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mega.nz/file/PUsEgQzD%23OXrMladZpJ_eflDouAnLsLDZuWLscA5BhtwEZen1mg4"
+                                    alt="QR Mega" class="w-full h-full" loading="lazy">
                             </div>
-                            
-                            <a href="https://mega.nz/file/CUcyXJII#ePPBCNrrUSLgr6uTxuzc9zUoL4G_euL6ejAj9g5z6EI" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6">
+
+                            <a href="https://mega.nz/file/CUcyXJII#ePPBCNrrUSLgr6uTxuzc9zUoL4G_euL6ejAj9g5z6EI"
+                                target="_blank" rel="noopener noreferrer"
+                                class="mt-auto w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6">
                                 <i class="fas fa-external-link-alt ml-2 text-xs"></i> رابط ميجا
                             </a>
                         </div>
@@ -408,18 +470,20 @@
     <!-- Footer -->
     <footer class="border-t border-border bg-muted/40 pb-6 pt-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <div class="flex items-center justify-center gap-3 mb-4 opacity-80 mix-blend-luminosity grayscale hover:grayscale-0 transition-all">
+            <div
+                class="flex items-center justify-center gap-3 mb-4 opacity-80 mix-blend-luminosity grayscale hover:grayscale-0 transition-all">
                 <img src="app_icon.png" alt="Logo" class="w-8 h-8 object-contain" loading="lazy">
                 <span class="font-bold text-lg text-foreground">MY Account Elfath</span>
             </div>
-            
+
             <p class="text-sm text-muted-foreground mb-3 text-center">
-                &copy; 2025 جميع الحقوق محفوظة لتطبيق إدارة الحسابات.
+                &copy; <span id="currentYear"></span> جميع الحقوق محفوظة لتطبيق إدارة الحسابات.
             </p>
-            
+
             <p class="text-xs text-muted-foreground/70 flex items-center justify-center gap-1">
                 تطوير وتحسين الأداء بواسطة
-                <a href="https://tahawy.org" target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-4 hover:text-primary transition-colors">
+                <a href="https://tahawy.org" target="_blank" rel="noopener noreferrer"
+                    class="font-semibold underline underline-offset-4 hover:text-primary transition-colors">
                     Tahawy
                 </a>
             </p>
@@ -448,6 +512,10 @@
                 observer.observe(el);
             });
         });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
